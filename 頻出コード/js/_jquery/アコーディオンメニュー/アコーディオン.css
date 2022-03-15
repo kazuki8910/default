@@ -1,0 +1,62 @@
+.faq__content {
+  margin-bottom: 15px;
+}
+
+.faq__content_open .faq__q::after {
+  -webkit-transform: translateY(-50%) rotate(135deg);
+          transform: translateY(-50%) rotate(135deg);
+}
+
+.faq__content_open .faq__box {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.faq__q {
+  font-family: koz-b;
+  font-weight: 900;
+  font-size: 20px;
+  color: #603813;
+  background: #e6c9d7;
+  padding: 0.5em 1.5em;
+  position: relative;
+  width: 100%;
+  text-align: left;
+}
+
+.faq__q::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+          transform: translateY(-50%) rotate(-45deg);
+  width: 7px;
+  height: 7px;
+  border-top: 3px solid #000;
+  border-right: 3px solid #000;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.faq__box {
+  height: 0px;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.faq__a {
+  font-family: koz-b;
+  font-weight: 900;
+  font-size: 18px;
+  color: #603813;
+  line-height: 1.8em;
+  padding-left: 1em;
+  padding-right: 1em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+/*# sourceMappingURL=アコーディオン.css.map */
