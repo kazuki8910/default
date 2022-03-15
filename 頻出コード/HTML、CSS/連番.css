@@ -1,0 +1,16 @@
+/* 
+連番の振り方
+参考サイト：http://www.htmq.com/style/white-space.shtml 
+*/
+
+
+p::before{
+    counter-increment:number;
+    content:counter(number)".";
+    position: absolute;
+    left: 0em;
+    top: 0;
+}
+h3{
+    counter-reset:number;
+}

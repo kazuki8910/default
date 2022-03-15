@@ -1,0 +1,278 @@
+
+// スタッフ紹介
+.staff{
+    padding: 30px 0;
+
+    &__ann{
+        font-family: koz-r;
+        font-weight: 900;
+        color: #333333;
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 20px;
+        line-height: 1.5em;
+        padding: 0 15px;
+    }
+
+    &__contents{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__content{
+        width: 20%;
+        margin: 0 2.5% 15px 2.5%;
+        transition:0.2s;
+
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+
+    &__photo{
+        width: 100%;
+        height: clamp(0px, 20vw, 160px);
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+
+        img{
+            height: 100%;
+            min-width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+    }
+
+    &__name{
+        font-family: koz-b;
+        font-size: 18px;
+        color: #000;
+        padding: 1em 0;
+    }
+
+
+    @media screen and (max-width:768px){
+        
+        &__ann{
+            text-align: left;
+        }
+
+        &__content{
+            width: 30%;
+            margin: 0 1.65% 15px 1.65%;
+        }
+
+        &__photo{
+            height: clamp(0px, 30vw, 256px);
+        }
+
+        &__name{
+            font-size: 16px;
+        }
+    }
+}
+
+
+// スタッフモーダル
+.modal{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+    background: rgba(77,77,77,0.5);
+
+    &__content{
+        display: none;
+        position: absolute;
+        z-index: 300;
+        top:50%;
+        left:50%;
+        transform: translateX(-50%) translateY(-50%);
+        background: white;
+        padding: 15px 10px;
+        width: calc(100% - 30px);
+        max-width: 650px;
+    }
+
+    &__name{
+        font-family: koz-b;
+        font-size: 21px;
+        color: #000;
+        margin-bottom: 15px;
+
+        &_kana{
+            font-size: 18px;
+        }
+    }
+
+    &__main{
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 15px;
+    }
+
+    &__img{
+        width: 250px;
+        height: 160px;
+        text-align: center;
+        margin-right: 15px;
+
+        img{
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    &__profiles{
+        flex: 1;
+    }
+
+    &__profile{
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 15px;
+    }
+
+    &__orange{
+        font-family: koz-b;
+        font-size: 16px;
+        padding: 0.5em 0;
+        width: 7em;
+        text-align: center;
+        background: #df801e;
+        color: white;
+        margin-right: 15px;
+    }
+
+    &__txt{
+        flex: 1;
+        font-family: koz-b;
+        color: #000;
+        font-size: 16px;
+        line-height: 1.5em;
+        white-space: pre-wrap;
+
+        &_orange{
+            color: #d95a24;
+        }
+
+        &_btm{
+            margin-bottom: 10px;
+        }
+    }
+
+
+    // 閉じるボタン
+    &__close{
+        width: 50px;
+        height: 50px;
+        background: orange;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateX(25%) translateY(-25%);
+    }
+
+    &__cross{
+        width: 30px;
+        height: 5px;
+        background: white;
+        position: absolute;
+        top:50%;
+        left:50%;
+
+        &_1{
+            transform: translateX(-50%) translateY(-50%) rotate(45deg);
+        }
+
+        &_2{
+            transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+        }
+    }
+
+    &__prev{
+        width: 35px;
+        height: 60px;
+        position: absolute;
+        top:50%;
+        left:0;
+        transform: translateY(-50%);
+
+        &::after{
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%) rotate(-45deg);
+            content: "";
+            width: 40px;
+            height: 40px;
+            border-top: 10px solid rgba(0,0,0,0.3);
+            border-left: 10px solid rgba(0,0,0,0.3);
+        }
+    }
+
+    &__next{
+        width: 35px;
+        height: 60px;
+        position: absolute;
+        top:50%;
+        right:0;
+        transform: translateY(-50%);
+
+        &::after{
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%) rotate(45deg);
+            content: "";
+            width: 40px;
+            height: 40px;
+            border-top: 10px solid rgba(0,0,0,0.3);
+            border-right: 10px solid rgba(0,0,0,0.3);
+        }
+    }
+
+
+    @media screen and (max-width:768px){
+        overflow: scroll;
+
+        &__content{
+            top: 15px;
+            transform:translateX(-50%);
+            margin-bottom: 15px;
+        }
+
+        &__name{
+            font-size: 18px;
+
+            &_kana{
+                font-size: 16px;
+            }
+        }
+
+        &__main{
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__img{
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+
+        &__orange{
+            font-size: 16px;
+        }
+
+        &__txt{
+            font-size: 16px;
+        }
+    }
+}

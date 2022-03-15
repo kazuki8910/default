@@ -1,0 +1,76 @@
+
+// よくあるご質問
+.faq{
+
+    &__content{
+        margin-bottom: 15px;
+
+        &_open{
+
+            .faq{
+
+                &__q{
+    
+                    &::after{
+                        transform: translateY(-50%) rotate(135deg);
+                    }
+                }
+
+                &__box{
+                    box-sizing: content-box;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                }
+            }
+        }
+    }
+
+    &__q{
+        font-family: koz-b;
+        font-weight: 900;
+        font-size: 20px;
+        color: #603813;
+        background: #e6c9d7;
+        padding: 0.5em 1.5em;
+        position: relative;
+        width: 100%;
+        text-align: left;
+
+        &::after{
+            content: "";
+            position: absolute;
+            top:50%;
+            right: 5%;
+            transform: translateY(-50%) rotate(-45deg);
+            width: 7px;
+            height: 7px;
+            border-top: 3px solid #000;
+            border-right: 3px solid #000;
+            transition:0.5s;
+        }
+    }
+
+    &__box{
+        height: 0px;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    &__a{
+        font-family: koz-b;
+        font-weight: 900;
+        font-size: 18px;
+        color: #603813;
+        line-height: 1.8em;
+        padding-left: 1em;
+        padding-right: 1em;
+        transition:0.5s;
+
+        // &_open{
+        //     line-height: 1.8em;
+        //     padding-top: 1em;
+        //     padding-bottom: 1em;
+        //     opacity: 1;
+        // }
+    }
+}

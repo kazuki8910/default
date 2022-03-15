@@ -1,0 +1,15 @@
+#stalker {
+  $radius: 150px;
+  pointer-events: none;
+  position: fixed;
+  top: - $radius;
+  left: - $radius;
+  width: $radius * 2;
+  height: $radius * 2;
+  background: rgba(0,0,0,0.5);
+  border-radius: 50%;
+  transition: 1s;
+  transition-timing-function: ease-out;
+  z-index: 999;
+}
+

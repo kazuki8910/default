@@ -1,0 +1,84 @@
+
+.accordion{
+    // アコーディオン部分
+    &__btn{
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-family: noto-b;
+        background: #0071BB;
+        font-size: 1.5rem;
+        color: white;
+        padding: 0.75em 0;
+        position: relative;
+        &::after{
+            content: "▼";
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            right: 0.8rem;
+            transition:0.5s;
+        }
+        &_open{
+            &::after{
+                transform: translateY(-50%) rotateX(180deg);
+            }
+        }
+    }
+    &__inner{
+        padding: 0.8rem;
+        background: #F9F9EF;
+        border-bottom: 3px solid #29AAE1;
+        border-right: 3px solid #29AAE1;
+        border-left: 3px solid #29AAE1;
+        overflow: hidden;
+    }
+    &__head{
+        font-family: noto-b;
+        color: #0071BB;
+        font-size: 1.2rem;
+        line-height: 1.5em;
+    }
+    &__txt{
+        font-family: noto-r;
+        font-size: 1rem;
+        color: #000000;
+        line-height: 1.5em;
+        padding-left: 1em;
+        position: relative;
+        &::after{
+            content: "・";
+            position: absolute;
+            top:0;
+            left: 0.5em;
+            transform: translateX(-50%);
+        }
+    }
+    &__red{
+        font-family: noto-b;
+        color: #FF0000;
+        font-size: 1rem;
+        line-height: 1.5em;
+    }
+
+    // イベント部分
+    &-enter{
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+    }
+    &-enter-active{
+        transition: 0.5s;
+    }
+    &-enter-to{
+        transition: 0.5s;
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+    }
+    &-leave-active{
+        transition: 0.5s;
+    }
+    &-leave-to{
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+    }
+}

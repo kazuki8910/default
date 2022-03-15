@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' href='add.css'>
+    <script src='https://kit.fontawesome.com/46e7bbbd3b.js' crossorigin='anonymous'></script>
+    <title>Document</title>
+</head>
+<body>
+<!-- Vue.js -->
+<script src="//unpkg.com/vue"></script>
+
+
+<div id="gallery" class="gallery"
+    @touchstart="OnTouchStart($event)"
+    @touchmove ="OntouchMove($event)"
+    @touchend  ="OnTouchEnd($event)"
+    @dragstart ="OnMouseStart($event)"
+    @dragover ="OnMouseMove($event)"
+    @dragend ="OnMouseEnd($event)"
+>
+    <div ref="wrapper" class="gallery__wrapper">
+        <figure class="gallery__figure">
+            <img class="gallery__img" loading='lazy' src='https://cdn.shopify.com/s/files/1/0525/1380/0349/files/01_3c4b3c9e-81b7-40f6-8eb7-6534640fbdea_1024x1024.jpg?v=1613429733' alt=''>
+        </figure>
+        <figure class="gallery__figure">
+            <img class="gallery__img" loading='lazy' src='https://cdn.shopify.com/s/files/1/0525/1380/0349/files/02_9a05f0c2-4fce-457b-bfa9-1fdc34e971d9_1024x1024.jpg?v=1613429742' alt=''>
+        </figure>
+        <figure class="gallery__figure">
+            <img class="gallery__img" loading='lazy' src='https://cdn.shopify.com/s/files/1/0525/1380/0349/files/03_1024x1024.jpg?v=1613429756' alt=''>
+        </figure>
+        <figure class="gallery__figure">
+            <img class="gallery__img" loading='lazy' src='https://cdn.shopify.com/s/files/1/0525/1380/0349/files/04_1024x1024.jpg?v=1613429756' alt=''>
+        </figure>
+        <figure class="gallery__figure">
+            <img class="gallery__img" loading='lazy' src='https://cdn.shopify.com/s/files/1/0525/1380/0349/files/05_1024x1024.jpg?v=1613429762' alt=''>
+        </figure>
+        
+        <figure class="gallery__figure">
+            <img class="gallery__img" loading='lazy' src='https://cdn.shopify.com/s/files/1/0525/1380/0349/files/01_3c4b3c9e-81b7-40f6-8eb7-6534640fbdea_1024x1024.jpg?v=1613429733' alt=''>
+        </figure>
+        <figure class="gallery__figure">
+            <img class="gallery__img" loading='lazy' src='https://cdn.shopify.com/s/files/1/0525/1380/0349/files/02_9a05f0c2-4fce-457b-bfa9-1fdc34e971d9_1024x1024.jpg?v=1613429742' alt=''>
+        </figure>
+        <figure class="gallery__figure">
+            <img class="gallery__img" loading='lazy' src='https://cdn.shopify.com/s/files/1/0525/1380/0349/files/03_1024x1024.jpg?v=1613429756' alt=''>
+        </figure>
+        <figure class="gallery__figure">
+            <img class="gallery__img" loading='lazy' src='https://cdn.shopify.com/s/files/1/0525/1380/0349/files/04_1024x1024.jpg?v=1613429756' alt=''>
+        </figure>
+        <figure class="gallery__figure">
+            <img class="gallery__img" loading='lazy' src='https://cdn.shopify.com/s/files/1/0525/1380/0349/files/05_1024x1024.jpg?v=1613429762' alt=''>
+        </figure>
+    </div>
+</div>
+
+
+<!-- script -->
+<script src="add.js"></script>
+</body>
+</html>

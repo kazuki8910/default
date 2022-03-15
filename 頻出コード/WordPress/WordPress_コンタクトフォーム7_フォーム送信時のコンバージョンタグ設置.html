@@ -1,0 +1,35 @@
+<!-- 
+    WordPress_コンタクトフォーム7_フォーム送信時のコンバージョンタグ設置
+    参照サイト
+    https://www.6666666.jp/wordpress/20190328/
+ -->
+
+
+<!-- フォームが１つの場合 -->
+<script>
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+  gtag('event', 'アクション名を入力', {
+    'event_category': 'カテゴリ名を入力',
+    'event_label': 'ラベル名を入力'
+  });
+}, false );
+</script>
+
+
+<!-- フォームが複数ある場合 -->
+<script>
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+  if ( 'フォームのIDを入力（コンタクトフォームのショートコードに書いてある）' == event.detail.contactFormId ) {
+    gtag('event', 'アクション名を入力', {
+      'event_category': 'カテゴリ名を入力',
+      'event_label': '[label]'
+    });
+  }
+  else if ( 'フォームのIDを入力（コンタクトフォームのショートコードに書いてある）' == event.detail.contactFormId ) {
+    gtag('event', 'アクション名を入力', {
+      'event_category': 'カテゴリ名を入力',
+      'event_label': 'ラベル名を入力'
+    });
+  }
+}, false );
+</script>

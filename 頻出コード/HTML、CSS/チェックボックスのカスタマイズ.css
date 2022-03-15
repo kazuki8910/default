@@ -1,0 +1,54 @@
+/* チェックボックスカスタマイズ例 */
+
+/* チェックボックスのinputタグ */
+input{
+    /* デフォルトのチェックボックスは消す */
+    display: none;
+
+    /* チェックボックスに付随するlabelタグ */
+    &+label{
+        font-family: noto-d;
+        font-size: 1.5rem;
+        color: #000000;
+        position: relative;
+        padding-left: 3rem;
+        cursor: pointer;
+
+        /* 新しいチェックボックス */
+        &::before{
+            content: "";
+            display: block;
+            width: 2rem;
+            height: 2rem;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background: #F0F0F0;
+            cursor: pointer;
+        }
+    }
+
+    /* チェック時 */
+    &:checked+label{
+
+        /* チェックマーク表示 */
+        &::after{
+            content: "";
+            display: block;
+            width: 2rem;
+            height: 1.2rem;
+            box-sizing: border-box;
+            border-bottom: 2px solid #000000;
+            border-left: 2px solid #000000;
+            position: absolute;
+            top: 0%;
+            left: 5px;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg) translateY(-50%);
+
+        }
+    }
+
+
+}

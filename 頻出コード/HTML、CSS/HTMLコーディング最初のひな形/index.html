@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- noindexの設定 -->
+    <!-- <meta name="robots" content="noindex"> -->
+    <!-- END：noindexの設定 -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=375, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="" >
+    
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- jquery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Vue.js -->
+    <script src="//unpkg.com/vue"></script>
+    <!-- fontawsome -->
+    <script src="https://kit.fontawesome.com/46e7bbbd3b.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+
+
+
+<!-- フォント遅延読み込み -->
+<script>
+    window.addEventListener('load', function() {
+        const delaycss = document.createElement('link');
+        delaycss.rel = 'stylesheet';
+        delaycss.href = 'assets/css/font.css';
+        document.head.appendChild(delaycss);
+    })
+</script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>

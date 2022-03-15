@@ -1,0 +1,20 @@
+<div id="accordion">
+    <button class="accordion__btn" v-bind:class="{accordion__btn_open:isOpen}" @click="clickAccordion">予防対策の詳細はこちら</button>
+    <transition name="accordion" @before-enter="beforeEnter" @enter="enter" @before-leabve="beforeLeave" @leave="leave">
+        <div class="accordion__inner" v-if="isOpen">
+            <p class="accordion__head">1  施術スタッフの取り組み</p>
+            <p class="accordion__txt">マスクの着用</p>
+            <p class="accordion__txt">利用者様宅洗面所での手洗い</p>
+            <p class="accordion__txt">施術時使用のタオル等において、頻度の高い消毒と衛生管理の徹底</p>
+            <p class="accordion__txt">施術者の消毒用アルコール携行の徹底</p>
+            <p class="accordion__txt">全ての利用者様へ毎日検温をして頂く為のお声掛け</p>
+            <p class="accordion__txt hp_mb15">タッフの毎日の検温の義務化。<span class="accordion__txt_bold">３７．５℃</span>以上の場合はコロナ陰性が確定するまで自宅待機とする。</p>
+
+            <p class="accordion__head">2  利用者様へのお願い</p>
+            <p class="accordion__txt">施術前の手洗い、うがいのために、洗面所をお借りいたします</p>
+            <p class="accordion__txt hp_mb15">検温のご協力お願いします。<span class="accordion__txt_bold">３７．５℃</span>以上の場合は施術は中止になりますのでご連絡お願い致します。</p>
+
+            <p class="accordion__red">上記事項、感染拡大抑止につきまして、ご理解、ご協力のほどよろしくお願い申し上げます。</p>
+        </div>
+    </transition>
+</div>

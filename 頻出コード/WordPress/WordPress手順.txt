@@ -1,0 +1,40 @@
+style.css記述内容
+/*
+Theme Name:
+Author: kazu
+Description: This is our original theme.
+Version: 1.0
+*/
+
+CSS、Javascript、imgのパスを通しなおす
+→echo get_template_directory_uri();で相対パス取得
+
+header、footer、その他パーツ分け
+→wp_head();を<head>内の最後、wp_footer();を<body>内の最後に記述
+
+screenshot.pngの設定
+→テーマのサムネになる
+
+functions.phpに関数を作成
+
+パーマリンク設定をカスタム構造のポストIDに変更
+
+プラグインWP Multibyte Patchをインストール
+→日本語環境で正しく動作させるためのプラグイン
+
+プラグインShow Current Templateをインストール
+→現在のphpファイルがわかる
+
+
+metaタグのディスクリプションを記述
+→<meta name=”description” content="<?php bloginfo('description”'); ?>”>
+
+headタグのtitleを記述
+→<title><?php bloginfo('name'); ?></title>
+
+
+固定ページを作成
+
+パーマリンクを作成
+
+all in one seo pack でSEO設定

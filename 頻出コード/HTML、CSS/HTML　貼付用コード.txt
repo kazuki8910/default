@@ -1,0 +1,94 @@
+fontawsomeのリンク
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+jquery読込コード（headタグ内、バージョンごとに更新必要かも）
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+javascriptファイル読込（bodyタグの最後、srcにjqueryのファイル名を入力）
+<script src="./js/animate.js"></script>
+
+CSS読込
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+
+気をつけること
+・javascriptのスクロールトップはクロームとエッジでそれぞれ互換性がない
+・８桁のカラーコードはエッジでは未対応
+
+jquery記入必須
+$(function(){
+});
+
+
+<!-- フォント遅延読込 -->
+<script>
+    window.addEventListener('load', function() {
+        const delaycss = document.createElement('link');
+        delaycss.rel = 'stylesheet';
+        delaycss.href = 'css/fonts.css';
+        document.head.appendChild(delaycss);
+    })
+</script>
+
+css最初の指定
+・マージン０
+・パディング０
+・ラインヘイト1
+・ボックスサイジングボーダーbox
+・aタグのテキストデコレーションnone
+・全要素のフォントサイズを10pxにしてそれぞれremでサイズ指定、レスポンシブで全要素のフォントサイズを変更するのをやっていみる
+・マージントップに統一した方がいいかも
+・brタグにはクラスなし、none、appear、のどれかにする
+　クラスなしは常に改行
+　noneはレスポンシブ時に消える
+　appearはレスポンシブ時に現れる
+
+*{
+    margin: 0;
+    padding: 0;
+    line-height: 1em;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.appear1{
+    display: none;
+}
+.appear2{
+    display: none;
+}
+
+
+//ブレークポイント１
+@media screen and (max-width:1000px){
+    html{
+        font-size: 8px;
+    }
+    .appear1{
+        display: inline;
+    }
+    .none1{
+        display: none;
+    }
+
+}
+
+//ブレークポイント２
+@media screen and (max-width:480px){
+    html{
+        font-size: 6.4px;
+    }
+    .appear2{
+        display: inline;
+    }
+    .none2{
+        display: none;
+    }
+
+}
